@@ -33,11 +33,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.database1DataSet = new DeliveryApp.Database1DataSet();
-            this.pracownicyTableAdapter = new DeliveryApp.Database1DataSetTableAdapters.PracownicyTableAdapter();
-            this.pracownicyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idPracownikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imiePracownikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoPracownikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +45,14 @@
             this.dataZatrudnieniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stanowiskoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pojazdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pracownicyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new DeliveryApp.Database1DataSet();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pracownicyTableAdapter = new DeliveryApp.Database1DataSetTableAdapters.PracownicyTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pracownicyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pracownicyBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -72,7 +71,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(255, 415);
+            this.button2.Location = new System.Drawing.Point(174, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 30);
             this.button2.TabIndex = 3;
@@ -107,45 +106,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 409);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged_1);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(93, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Eksportuj";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.AutoSize = true;
-            this.button4.Location = new System.Drawing.Point(174, 415);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 30);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Odśwież";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.EnforceConstraints = false;
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pracownicyTableAdapter
-            // 
-            this.pracownicyTableAdapter.ClearBeforeFill = true;
-            // 
-            // pracownicyBindingSource1
-            // 
-            this.pracownicyBindingSource1.DataMember = "Pracownicy";
-            this.pracownicyBindingSource1.DataSource = this.database1DataSet;
             // 
             // idPracownikaDataGridViewTextBoxColumn
             // 
@@ -220,12 +180,38 @@
             this.pojazdDataGridViewTextBoxColumn.HeaderText = "Pojazd";
             this.pojazdDataGridViewTextBoxColumn.Name = "pojazdDataGridViewTextBoxColumn";
             // 
+            // pracownicyBindingSource1
+            // 
+            this.pracownicyBindingSource1.DataMember = "Pracownicy";
+            this.pracownicyBindingSource1.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.EnforceConstraints = false;
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.AutoSize = true;
+            this.button3.Location = new System.Drawing.Point(93, 415);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 30);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Eksportuj";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pracownicyTableAdapter
+            // 
+            this.pracownicyTableAdapter.ClearBeforeFill = true;
+            // 
             // ListEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -236,8 +222,8 @@
             this.Load += new System.EventHandler(this.ListEmployees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pracownicyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pracownicyBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,7 +237,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPracownikaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imiePracownikaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoPracownikaDataGridViewTextBoxColumn;
